@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/blackcess_beta_testing/static/css/main.826cdc06.css",
-    "main.js": "/blackcess_beta_testing/static/js/main.12fd60c6.js",
+    "main.css": "/blackcess_beta_testing/static/css/main.d6205320.css",
+    "main.js": "/blackcess_beta_testing/static/js/main.1c9decc6.js",
     "index.html": "/blackcess_beta_testing/index.html",
-    "main.826cdc06.css.map": "/blackcess_beta_testing/static/css/main.826cdc06.css.map",
-    "main.12fd60c6.js.map": "/blackcess_beta_testing/static/js/main.12fd60c6.js.map"
+    "main.d6205320.css.map": "/blackcess_beta_testing/static/css/main.d6205320.css.map",
+    "main.1c9decc6.js.map": "/blackcess_beta_testing/static/js/main.1c9decc6.js.map"
   },
   "entrypoints": [
-    "static/css/main.826cdc06.css",
-    "static/js/main.12fd60c6.js"
+    "static/css/main.d6205320.css",
+    "static/js/main.1c9decc6.js"
   ]
 }
