@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blackcess_beta_testing/static/css/main.826cdc06.css",
+    "main.js": "/blackcess_beta_testing/static/js/main.12fd60c6.js",
+    "index.html": "/blackcess_beta_testing/index.html",
+    "main.826cdc06.css.map": "/blackcess_beta_testing/static/css/main.826cdc06.css.map",
+    "main.12fd60c6.js.map": "/blackcess_beta_testing/static/js/main.12fd60c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.826cdc06.css",
+    "static/js/main.12fd60c6.js"
+  ]
+}
