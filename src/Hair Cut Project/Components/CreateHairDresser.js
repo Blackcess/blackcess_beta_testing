@@ -624,10 +624,10 @@ useEffect(()=>{
     }
 },[getStartedStatus])
     return<>
-   {/* {(creation)&&  <div className="create-profile">   <GetStarted value={{statusFeedBack:getDataFromGetStarted}}/></div> }
-   { ((!creation) && (intoApp) ) && <div className="app-home"> <HairDresser_Profile/></div> } */}
+    {(creation)&&  <div className="create-profile">   <GetStarted value={{statusFeedBack:getDataFromGetStarted}}/></div> }
+   { ((!creation) && (intoApp) ) && <div className="app-home"> <HairDresser_Profile/></div> } 
 
-   <HairDresser_Profile/>
+   // <HairDresser_Profile/>
     
     </>
 }
