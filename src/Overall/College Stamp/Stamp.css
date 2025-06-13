@@ -1,0 +1,13 @@
+.stamp-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    align-items:center;
+    width:100%;
+    /* background-color:blue; */
+    font-family:sans-serif;
+    color:purple;
+}
+.stamp-details{
+    margin-top:2%;
+}

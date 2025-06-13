@@ -1,0 +1,23 @@
+.oval-display-sheet-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.ovals-frame{
+display: flex;
+gap:15px;
+/* justify-content: center; */
+}
+.ovals-sub-frame-1 ,.ovals-sub-frame-2{
+    display: flex;
+    flex-direction: column;
+}
+.statistics-outer-frame{
+
+}

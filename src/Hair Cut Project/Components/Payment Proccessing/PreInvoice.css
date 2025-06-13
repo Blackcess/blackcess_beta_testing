@@ -1,0 +1,235 @@
+.PreInvoice-container-mobile-screen{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* background-color: blue; */
+}
+.dresser-side-profile-container-mobile-screen{
+    display: flex;
+
+}
+.dresser-side-prof{
+    height: 60px;
+    width:60px;
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe3EnS76IEBSHccpieNpI62A9_uJw0EwL3WA&s "); */
+    background-size:cover ;
+    background-position: center;
+    border-radius: 50%;
+}
+.invoice-prep-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.invoice-prep-helper-container-mobile-screen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+}
+.preinvoice-child-2{
+    margin-top: 30px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.general-button{
+    padding: 15px;
+    border: none;
+    background-color: rgb(11, 173, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+.dresser-side-name{
+    font-size:14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+.dresser-side-rating{
+    font-size: 10px;
+    background-color: green;
+    width: fit-content;
+    color: white;
+    padding: 3px 5px;
+}
+.dresser-side-identification{
+    font-size: 12px;
+
+}
+.dresser-side-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.invoice-prep-helper-value{
+    font-size: 12px;
+
+}
+.price-key-class{
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(5, 182, 5);
+}
+.invoice-prep-helper-key{
+    font-size: 12px;
+}
+.return-to-root{
+    font-size: 18px;
+    color: black;
+    position: absolute;
+    top: -25px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#back-sign{
+    font-size:12px ;
+}
+.profile-pic-extender{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.924);
+    color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+}
+.inner-extender{
+    position: absolute;
+}
+.image-closer{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    color: white;
+    font-size: 18px;
+}
+.hide-this{
+    display: none;
+}
+.time-slot-template{
+    position: relative;
+     height: 75vh;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time-slot-heading{
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.time-slot-selector{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* background-color: green; */
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.my-time-slot{
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding: 10px;
+    background-color: rgb(104, 160, 104);
+    color: black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slot-select-confirm{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    width: 75%;
+    align-items: center;
+   
+
+    /* height: 100vh; */
+    /* position: absolute; */
+    /* top: 0%; */
+    /* background-color: rgba(0, 0, 0, 0.486); */
+
+    /* background-color: rgba(0, 0, 0, 0.209); */
+}
+.s-s-confirm-1{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: rgb(72, 71, 71);
+}
+.slot-select-confirm-btn{
+    padding: 10px;
+    background-color: rgb(48, 196, 48);
+    border: none;
+    outline: none;
+
+}
+.time-slot-select-template{
+    
+}
+
+.slot-confirm-heading{
+    margin-bottom: 20px;
+   color: green;
+}
+.button-space{
+    display: flex;
+    gap: 20px;
+}
+.slot-select-confirm-btn{
+    border-radius: 8px;
+}
+#s-s-btn-cancel{
+    background-color: crimson;
+}
+.s-s-p-2{
+    margin-bottom: 20px;
+}
+.s-s-p-1{
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.smart-span{
+    text-decoration: underline;
+    font-weight: 500;
+}
+.app-set-container{
+    /* background-color: blue; */
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+}
+.done-ack{
+    position:absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(11, 206, 11);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    font-size: 12px;
+}

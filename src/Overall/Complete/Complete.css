@@ -1,0 +1,23 @@
+/* *{
+    font-size:14px;
+} */
+.thomas-receipt{
+    margin-left: 400px;
+    margin-top: 150px;
+    border: 2px solid black;
+    width: 845px;
+}
+.nav{
+    padding-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.body{
+    margin-bottom: 15px;
+    margin-top:40px;
+}
+.stamp{
+    position:fixed;
+    top:55%;
+    right:50%
+}

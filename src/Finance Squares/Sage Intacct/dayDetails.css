@@ -1,0 +1,205 @@
+.day-details-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 613px;
+    /* gap: 50px; */
+    border-radius: 10px;
+    border: 1px solid gray;
+    /* box-shadow: 2px 2px 2px 2px black; */
+}
+.day-details-sub-1{
+    /* display: flex; */
+    border-bottom: 1px solid gray;
+    /* margin-bottom: 20px; */
+    padding: 20px;
+    
+}
+.close-icon-1{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    /* background-color: green; */
+}
+
+.close-icon-1::before{
+    content: "close";
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    visibility: hidden;
+    color: black;
+    font-family: sans-serif;
+    font-size:12px;
+}
+.close-icon-1:hover{
+    color: crimson;
+   
+}
+.close-icon-1:hover::before{
+    visibility: visible;
+}
+.day-descriptor{
+    display: flex;
+    flex-direction: row;
+}
+.day-descriptor-1{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQN4_repC9xXdcOQCJW6nPyg2OhVp8LVcbfFpyZv05UySeg&s");
+    background-position: center;
+    background-size: contain;
+
+}
+
+
+.day-descriptor-2{
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.calendar{
+    position: relative;
+    width: 100px;
+    width: 100px;
+}
+.day-details-descriptor-1-2{
+    font-size: 12px;
+}
+.day-details-descriptor-1-3{
+    font-size: 10px;
+}
+#bar-rep{
+    width: 250px;
+    background-color: rgb(201, 200, 200);
+    height: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    cursor: pointer;
+}
+.inner-rapper-1,.inner-rapper-2,.inner-rapper-3,.inner-rapper-4{
+    border-radius: 6px;
+    position: absolute;
+    height: 80%;
+    width: 66%;
+    background-color: rgb(109, 57, 168);
+}
+.day-details-sub-2{
+    
+  
+    border-bottom: 1px solid gray;
+    min-height: 200px;
+    /* background-color: green; */
+
+}
+.sub-2-det-details{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid gray; */
+    /* padding: 25px; */
+    /* padding-bottom: 0px; */
+    min-width: 200px;
+    font-size: 10px;
+
+}
+.det-total{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.day-details-sub-3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    padding: 25px;
+}
+.sub-2-graphic-sec-container{
+    
+}
+.day-details-navigation-center{
+    font-size: 12px;
+    display: flex;
+    margin-bottom:25px;
+    justify-content: end;
+    padding:10px 25px;
+    gap: 35px;
+}
+.daily-stats-view-port{
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: start;
+    padding: 25px;
+    /* padding-bottom:8px; */
+}
+.weekly-stats-view-port,.monthly-stats-view-port{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.day-details-nav-1{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.entire-table-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.data-sheet-template{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.data-sheet-header-row{
+    display: flex;
+}
+.data-sheet-header-element{
+    border-right: 0.6px solid gray;
+    /* padding-right: 10px; */
+    width: 100px;
+    display: flex;
+    justify-content: end;
+    padding: 10px 15px;
+    
+}
+.data-sheet-amounts-section,.data-sheet-quantity-section{
+    display: flex;
+}
+.data-sheet-amount-element{
+    width: 60px;
+    display: flex;
+    justify-content: end;
+    border-right: 0.6px solid black;
+}
+.comments-special{
+    font-size: 10px;
+    word-spacing: 5px;
+    /* background-color: green; */
+}
+.header-special{
+    border-bottom: 1.5px solid gray;
+}
+.amount-special{
+    color: green;
+    font-size: 12px;
+    cursor: pointer;
+   
+}
+.quantity-bit-off-special{
+    color:crimson ;
+}
+.quantity-bit-on-special{
+    color:green;
+}
