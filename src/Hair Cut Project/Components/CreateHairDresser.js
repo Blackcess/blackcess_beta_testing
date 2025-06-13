@@ -410,7 +410,8 @@ function ErrorConsole(props){
         },
         phone:{
             isEmpty:"Phone number can't be empty",
-            digit:"Phone number should have digits"
+            digit:"Phone number should have digits",
+            digit1:"remove preceeding '0' on mobile number"
         },
         name:{
             isEmpty:"Name can't be empty",
@@ -432,6 +433,7 @@ function ErrorConsole(props){
     <li className="phone-section-section">
         {(props.value.phoneState.userInput==="empty") && <p>{err.phone.isEmpty}</p>}
         {(props.value.phoneState.userInput==="invalid") && <p>{err.phone.digit}</p>}
+        {/* {(props.value.phoneState.userInput==="invalid") && <p>{err.phone.digit1}</p>} */}
     </li>
     <li className="company-section">
     {(props.value.companyState.userInput==="empty") && <p>{err.company.isEmpty}</p>}
@@ -517,16 +519,17 @@ function GetStarted(props){
         <span className="main-brand-name">Blackcess</span>
     </div>
     <div className="main-frame-2">
-      {  (started1Render) && <GetStarted1 value={{feedBackChannel:getDataFromGetStarted1}}/> }
-        
+    {  (started1Render) &&   <GetStarted1 value={{feedBackChannel:getDataFromGetStarted1}}/> }
     </div>
-    <div className="cntd hide">
-       {(semaphoreLock)&&  <Pre_ProfileLoader value={{statusFeedBack:getDataFromLoader}}/>}
-       </div>
     
-    <div className="main-frame-3 hidden">
-       {  (loaderStatus) &&<GetStarted2 value={{statusFeedBack:getDataFromGetStarted2}}/>}
+    <div className="cntd hide">
+        { (semaphoreLock)&& <Pre_ProfileLoader value={{statusFeedBack:getDataFromLoader}}/> }
+       </div> 
+    
+       <div className="main-frame-3 hidden">
+      {(loaderStatus) && <GetStarted2 value={{statusFeedBack:getDataFromGetStarted2}}/>}
     </div>
+    
    </section>
   
    
@@ -574,9 +577,11 @@ function LazyLoader(){
 function Pre_ProfileLoader(props){
     useEffect(()=>{
         let loader= document.querySelector(".pre-profile-loader");
+        let loaderContainer = document.querySelector(".pre-profile-loader-template")
         var width=0;
        let interval_Id=  setInterval(()=>{
         if(width===240){
+            loaderContainer.style.height="0px";
             props.value.statusFeedBack(true)
             return ()=>{
                 clearInterval(interval_Id)
