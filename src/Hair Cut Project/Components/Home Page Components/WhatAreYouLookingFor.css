@@ -1,0 +1,157 @@
+.looking-root-component-template{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.looking-child-component-1,.looking-child-component-2,.looking-child-component-3{
+    /* height: 600px; */
+    /* width: 100%; */
+    /* background-color: blue; */
+}
+.looking-child-component-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.component1-womenSection-container-mobile-screen{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+/* .women-section-services{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 35px;
+} */
+ .women-section-services-mobile-screen{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 15px;
+   /* flex: 1,1,calc(20%-35px); */
+
+}
+
+.women-section-single-service{
+    background-color: #d4d2d2;
+    font-size: 12px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(40%-15px);
+}
+.women-section-single-service-mobile-screen{
+    /* background-color: #d4d2d2; */
+     /* https://grabient.com/HQDgDAbANMDsCsBGGsLWAZgJyxtsesIMiYGJ8xwiE8UALMAEz1YPPbtO1A/ */
+    /* https://grabient.com/HQTgHCA0wEwIxWAVgMwugdhQFmgj0IcAbNPAcHEhTGGJCskgAyQzLG7bAZxhA/ */
+
+    /* https://grabient.com/HQTgHCA0wEwIxWAVgMwugdhQFmgj0IcAbNPAcHEhTGGJCskgAyQzLG7bAZxhA/ */
+
+/* https://grabient.com/HQBgrAzANKAsAcMT0cAjLAnDNYDsOsATDEUSKWicGWlBMHmtA3kS8AGyYRA/ */
+
+background: linear-gradient(90deg, rgba(5, 5, 10, 1.000) 0.000%, rgba(5, 5, 10, 1.000) 7.692%, rgba(9, 10, 14, 1.000) 7.692%, rgba(9, 10, 14, 1.000) 15.385%, rgba(13, 14, 18, 1.000) 15.385%, rgba(13, 14, 18, 1.000) 23.077%, rgba(18, 19, 22, 1.000) 23.077%, rgba(18, 19, 22, 1.000) 30.769%, rgba(22, 23, 26, 1.000) 30.769%, rgba(22, 23, 26, 1.000) 38.462%, rgba(26, 27, 30, 1.000) 38.462%, rgba(26, 27, 30, 1.000) 46.154%, rgba(30, 31, 34, 1.000) 46.154%, rgba(30, 31, 34, 1.000) 53.846%, rgba(34, 35, 38, 1.000) 53.846%, rgba(34, 35, 38, 1.000) 61.538%, rgba(38, 39, 42, 1.000) 61.538%, rgba(38, 39, 42, 1.000) 69.231%, rgba(41, 42, 45, 1.000) 69.231%, rgba(41, 42, 45, 1.000) 76.923%, rgba(44, 45, 48, 1.000) 76.923%, rgba(44, 45, 48, 1.000) 84.615%, rgba(46, 47, 51, 1.000) 84.615%, rgba(46, 47, 51, 1.000) 92.308%, rgba(48, 49, 53, 1.000) 92.308% 100.000%);
+    font-size: 12px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(40%-15px);
+    color: white;
+    font-weight: 300;
+}
+.women-section-products-mobile-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 300px; */
+    width: 100%;
+    /* background-color: blue;*/
+}
+.women-products-mobile-screen{
+    height:100%;
+    width: 100%;
+    /* object-fit: cover; */
+
+}
+.women-deals-container-mobile-screen{
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    border-top: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    padding: 15px 0px;
+    padding-bottom: 0px;
+
+}
+.women-deal-details{
+    display: flex;
+    flex-direction: column;
+
+}
+.women-deals-sample-image-mobile-screen{
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe3EnS76IEBSHccpieNpI62A9_uJw0EwL3WA&s"); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.women-details-cnt-mobile-screen{
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    /* border-right: 1px solid black; */
+
+}
+.women-prof-img{
+    width: 50px;
+    height: 50px;
+    /* background: url("data:image/jpeg;base64,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"); */
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.women-categ{
+    font-size: 10px;
+}
+.women-prof-icon{
+    font-size: 12px;
+    width: 50px;
+    height:10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 15px;
+    /* color: blue; */
+}
+.women-deal-book-app-btn{
+    padding: 10px;
+    /* width: 55%; */
+    width: fit-content;
+    white-space: nowrap;
+    font-size: 12px;
+    border: none;
+    background-color: rgb(13, 219, 13);
+}
+.book-app{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.id-tracker-disguise{
+    display: flex;
+    justify-content: center;
+    font-size: 2px;
+    opacity: 0;
+    
+}

@@ -1,0 +1,12 @@
+.navigation-container{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+
+}
+.address{
+    transform: translateY(42px);
+}
+.logo{
+    transform: translateY(20px);
+}

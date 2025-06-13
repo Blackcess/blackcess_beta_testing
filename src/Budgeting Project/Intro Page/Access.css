@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Permanent+Marker&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Permanent+Marker&family=Quicksand:wght@300..700&family=Varela+Round&display=swap');
+html{
+    font-size: 16px;
+}
+body{
+
+  /* font-family: "Varela Round", serif;
+  font-weight: 400;
+  font-style: normal;  */
+  /* font-family: sans-serif; */
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  
+  font-style: normal;
+  
+ 
+}
+.no-display{
+    display:none;
+}
+.access-component{
+    width:28rem;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    /* padding-left:4rem; */
+    /* background-color: blue; */
+    padding: 20px;
+}
+.firm-identifier{
+    padding-left: 0rem;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background: transparent;
+    margin-bottom: 1.4rem;
+    margin-bottom: 50px;
+}
+.my-name{
+    letter-spacing: 1px;
+    font-weight:700;
+    /* color:rgb(30, 30, 30); */
+    color: black;
+    font-size: 2rem;
+    transform: translateX(1.25rem);
+}
+.access-body{
+    background-color: white;
+    padding-left: 4rem;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    /* border:1px solid gray; */
+    box-shadow: 5px 5px 5px gray;
+}
+.initial-credit{
+    display: flex;
+    flex-direction:row;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    gap: 0.3rem;
+    margin-bottom: 2rem;
+}
+.initial-credit .icon1{
+    width:1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.thomas-brand{
+    color: rgb(3, 3, 100);
+    /* font-family: sans-serif; */
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.signin-alert{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+}
+.sign-in-head{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.0067rem;
+    color: black;
+    margin:0;
+}
+.sign-in-p{
+    color: black;
+    font-size: 0.925rem;
+    letter-spacing: 0.004375rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#access-code{
+    height: 2rem;
+    width:80%;
+    background-color: rgb(224, 224, 224);
+    border:none;
+    /* border-bottom: 1px solid blue; */
+    padding-left: 0.625rem;
+    outline :none;
+    margin-bottom: 2rem;
+}
+.sign-in-assistance{
+    color: black;
+    font-size: 0.925rem;
+    letter-spacing: 0.004375rem;
+}
+.no-account{
+    padding-right: 0.625rem;
+}
+.create-one{
+   color:blue;
+   cursor: pointer; 
+   
+}
+.create-one:hover{
+    color:gray;
+    text-decoration: underline;
+}
+#access-denied{
+    margin-top:0.7rem;
+    margin-bottom:0.7rem;
+}
+.access-submit-button{
+    height: 40px;
+    width: 50%;
+    background-color: rgb(45, 45, 237);
+    color: white;
+    letter-spacing: 0.01rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.help-options{
+
+}
+.assistance{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    height: 2.56rem;
+    /* background-color: blue; */
+    padding-left: 1.85rem;
+    box-shadow: 5px 5px 5px gray;
+    /* border:1px solid gray; */
+    background-color: #fff;
+}
+.option-key{
+    color: blue;
+    padding-right:1.4rem;
+}
+.assistance-details{
+    
+}

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Permanent+Marker&family=Quicksand:wght@300..700&family=Rubik+Mono+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Permanent+Marker&family=Quicksand:wght@300..700&family=Rubik+Mono+One&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap');
+
+.error-container{
+    display: grid;
+    /* background-color:green; */
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img oops"
+                        "instructions instructions"
+                        ;
+                        /* overflow: hidden; */
+/* border: 1px solid black; */
+padding:30px;
+
+}
+
+.err-image{
+    border-radius:50%;
+    grid-area:img;
+    background-color:yellow;
+    width: 150px;
+    aspect-ratio: 1/1;
+    margin: 15px;
+    margin-left: 20px;
+}
+.error-oops{
+    grid-area:oops;
+        font-family: "Rubik Mono One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size:1.4rem;
+        margin: 15px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+      
+}
+.error-body{
+    grid-area: instructions;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "head"
+                        "try";
+  font-family: "Sofia Sans Condensed", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 10px;
+
+}
+
+.body-head{
+    grid-area: head;
+    margin-bottom: 15px;
+}
+.body-instructions{
+    grid-area: try;
+}
+.error-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 20px;
+}

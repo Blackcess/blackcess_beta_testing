@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Permanent+Marker&family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap');
+/* 
+.noto-sans-<uniquifier> {
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  } */
+
+  html{
+    font-size: 16px;
+  }
+
+  .transport-container{
+display: flex;
+flex-direction: column;
+min-width:75%;
+font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+      font-size: 0.75rem;
+      /* background-color:blue; */
+      padding-bottom: 25px;
+    border-bottom: 1px dotted gray;
+  }
+.transport-title{
+    position: inherit;
+    font-size: 14px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+
+}
+    .transport-cash-flow{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    /* border: 1px solid green; */
+}
+.transport-detail-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  1fr;
+    grid-template-areas: ". morning evening total";
+}
+.day{
+    font-size: 10px;
+    font-weight: 400;
+    font-size: 0.62rem;
+}
+.morning-transport,.evening-transport,.total-transport{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: start;
+    font-weight: 600;
+}
+.morning-transport{
+    grid-area: morning;
+}
+.evening-transport{
+    grid-area: evening;
+}
+.total-transport{
+    grid-area: total;
+}
+.net-income,.not-recquring-cash,.total-operations,.change-in-cash{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"incomeOp incomeMorning incomeEvening incomeTotal";
+
+}
+/* .net-income-tag{
+    display: flex;
+    flex-direction: column;
+} */
+.net-income,.not-recquring-cash{
+padding: 0.93rem 0;
+border-bottom: 1px solid gray;
+border-radius: 3px;
+}
+.morning-income,.evening-income,.total-income,.net-income-tag{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "head"
+    "foot";
+    justify-content: start;
+
+
+}
+.ops{
+    font-weight: 800;
+    font-size:14px;
+    grid-area: head;
+    /* border: 1px solid black; */
+    margin: 0;
+    margin-bottom: 0.93rem;
+}
+.no-display{
+    grid-area: head;
+}
+.income-amount,.my-net{
+    grid-area: foot;
+}
+.income-amounts{
+    font-size: 10px;
+    font-weight: 400;
+    color: green;
+    cursor:pointer
+}
+.ops-not-h4{
+    grid-area: head;
+}
+.total-operations{
+    font-weight: 600;
+    padding: 10px 0;
+}
+ .total-operations .income-amounts{
+    font-weight: 700;
+    color: red;
+}
+.total-changes{
+    font-weight: 600;
+    text-decoration: underline;
+    /* margin-bottom: 10px; */
+}
+.account-name{
+    font-weight: 600;
+    /* margin-bottom: 10px; */
+}
+.change-in-cash .income-amounts{
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+
+
+

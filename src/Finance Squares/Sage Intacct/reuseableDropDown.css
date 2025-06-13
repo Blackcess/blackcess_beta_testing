@@ -1,0 +1,25 @@
+.a663-container-reuesable{
+    display: flex;
+    flex-direction:column;
+    /* margin: 50% 50%; */
+
+}
+.q63683-container-reusable-child-1{
+    display: flex;
+    cursor: pointer;
+
+}
+.child-1-hide{
+    display: none;
+    visibility:hidden;
+}
+.j63683-container-reusable-child-2{
+    display: flex;
+    flex-direction: column;
+}
+.reusable-options-list{
+    cursor: pointer;
+}
+.rotateX{
+    transform: rotate(180deg);
+}

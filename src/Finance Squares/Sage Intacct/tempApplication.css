@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Permanent+Marker&family=Quicksand:wght@300..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap');
+
+/* .noto-sans-<uniquifier> {
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }  */
+
+
+  .app{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "sideBarArea mainArea navArea";
+
+  }
+  .sideBar{
+    background-color: black;
+    height: 100vh;
+    grid-area: sideBarArea;
+  }
+  .main-body{
+    /* margin-right: 100px; */
+    grid-area: mainArea;
+    display: grid;
+    grid-template-rows: 1fr 85vh 100px;
+    grid-template-columns:0px 2fr 2fr 1fr;
+    grid-template-areas: ". column2 column2 . "
+                        " . data data data "
+                        ". . footer footer ";
+ /* background-color: blue; */
+
+  }
+  .ads{
+    grid-area: navArea;
+  }
+  .app-dashboard{
+    grid-area: column2;
+    position: relative;
+    /* background-color: gray; */
+  }
+  .app-TBD{
+    /* grid-area: tbd; */
+  }
+  .app-content{
+    grid-area: data;
+    /* background-color: gray; */
+    padding: 35px;
+    overflow: scroll;
+  }
+  .app-footer{
+    grid-area: footer;
+    background-color: black;
+  }
+
+  .lorem{
+    width: 50%;
+    padding: 20px;
+    /* color: green; */
+  }
+
+
+
+  /* Styling inside the finance squerae Component */
+  .access-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

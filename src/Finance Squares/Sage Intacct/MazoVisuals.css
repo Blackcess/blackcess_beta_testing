@@ -1,0 +1,101 @@
+.analysis-center-template{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+.analysis-exhibit-a{
+    /* display: flex;
+    gap: 20px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 300px;
+    width: fit-content;
+    /* padding-left:20px; */
+    /* padding-top: 20px; */
+    /* align-items: end; */
+    /* position: relative; */
+    /* cursor: pointer; */
+    /* background-color: green;  */
+    /* overflow: hidden; */
+
+}
+.analysis-exhibit-a-b{
+    display: flex;
+    gap: 20px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 300px;
+    width: fit-content;
+    /* padding-left:20px; */
+    /* padding-top: 20px; */
+    align-items: end;
+    position: relative;
+    cursor: pointer;
+    /* background-color: green; */
+
+}
+.default-bar{
+    height:200px ;
+    background-color: yellow;
+    width: 20px;
+    position: relative;
+}
+.default-bar::after{
+    content: "Mulesa";
+    position: absolute;
+    top: 100%;
+    /* padding-top: 100px; */
+    transform: skewY(15deg);
+    height: max-content;
+    width: fit-content;
+    font-size: 12px;
+
+}
+.default-bar:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+.graph-analyser{
+    display: flex;
+    align-items: end;
+
+}
+.y-axis-scale-labels{
+    display: flex;
+    padding: 0;
+    gap: 16px;
+    margin: 0;
+    flex-direction: column;
+    /* background-color: green; */
+}
+.y-axis-values{
+    font-size: 9px;
+    /* background-color: green; */
+}
+.target-cursor{
+    position: absolute;
+    color: red;
+    /* cursor: pointer; */
+}
+/* .target-cursor::after{
+    content: ".";
+    height: 1px;
+    width: 100px;
+    background-color: green;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    border-top: 1px dotted green;
+} */
+/* .target-cursor::before{
+    content: ".";
+    height: 200px;
+    width: 1px;
+    background-color: green;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    border-right: 1px dotted green;
+} */
