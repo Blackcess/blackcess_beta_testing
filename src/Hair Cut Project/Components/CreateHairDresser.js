@@ -623,7 +623,7 @@ let getDataFromGetStarted= (data)=>{
 }
 
 useEffect(()=>{
-    if(getStartedStatus){
+    if(getStartedStatus){ 
         setIntoApp(true);
         setCreation(false);
     }
