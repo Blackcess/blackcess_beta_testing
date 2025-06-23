@@ -241,7 +241,109 @@ const JuneBudget={
         {
             day:13,
             expenses:{
-                
+                transportCost:{
+                    total:0,
+                    firstPart:0,
+                    secondPart:0,
+                    comment:"Deducted from the transport account"
+                }
+            }
+        },
+        {
+            day:14,
+            expenses:{
+                transportCost:{
+                    total:0,
+                    firstPart:0,
+                    secondPart:0,
+                    comment:"Deducted from the transport account"
+                }
+            }
+        },
+        {
+            day:15,
+            expenses:{
+                transportCost:{
+                    total:0,
+                    firstPart:0,
+                    secondPart:0,
+                    comment:"Deducted from the transport account"
+                },
+                 drink:{
+                    amount:20,
+                    comment:"Deducted from the food account"
+                },
+                sweetLassi:{
+                    amount:20,
+                    comment:"Deducted from the food account",
+                },
+            }
+        },
+        {
+            day:16,
+            expenses:{
+                transportCost:{
+                    total:0,
+                    firstPart:0,
+                    secondPart:0,
+                    comment:"Deducted from the transport account"
+                },
+                rice:{
+                    amount:90,
+                    quantity:"2 kg",
+                    comment:"Deducted from the food account"
+                },
+                drink:{
+                    amount:20,
+                    comment:"Deducted from the food account"
+                },
+                sweetLassi:{
+                    amount:20,
+                    comment:"Deducted from the food account",
+                },
+                sauce:{
+                    amount:20,
+                    comment:"Deducted from the food account"
+                }
+            }
+        },
+        {
+            day:17,
+            expenses:{
+                transportCost:{
+                    total:0,
+                    firstPart:0,
+                    secondPart:0,
+                    comment:"Deducted from the transport account"
+                },
+                sugar:{
+                    amount:48,
+                    comment:"Deducted from the food account"
+                },
+                tomatoes:{
+                    amount:50,
+                    quantity:"1 kg",
+                    comment:"Deducted from the food account",
+                },
+                sweetLassi:{
+                    amount:20,
+                    comment:"Deducted from the food account"
+                },
+                drink:{
+                    amount:20,
+                    comment:"Deducted from the food account",
+                }
+            }
+        },
+        {
+            day:18,
+            expenses:{
+                transportCost:{
+                    total:0,
+                    firstPart:0,
+                    secondPart:0,
+                    comment:"Deducted from the transport account"
+                }
             }
         }
     ]

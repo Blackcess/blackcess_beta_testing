@@ -92,7 +92,9 @@
 }
 .profile-nav{
     grid-area: user-nav;
-    
+    position: sticky;
+    top: 0px;
+    /* background-color: green; */
 }
 
 
@@ -217,7 +219,7 @@
     /* height: 5000px; */
     padding: 15px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
     position: relative;
     /* background-color: blue; */
@@ -387,7 +389,7 @@
 }
 .order-set-pop-up{
     position: fixed;
-    top: 89%;
+    top: 85%;
     margin-left: 10px;
     display: flex;
     height: 40px;

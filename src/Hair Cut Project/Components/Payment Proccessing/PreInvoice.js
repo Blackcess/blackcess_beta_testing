@@ -81,10 +81,16 @@ function PreInvoice(props){
     let getFeedbackFromAppointmentSet=(feedBack)=>{
         setBookingSet(feedBack)
     }
+    let getTimeSlot=(time)=>{
+        setPaymentDetails((prev)=>{
+            prev.time=time;
+            return prev;
+        })
+    }
 
     useEffect(()=>{
         if(bookingSet){
-             props.value.greenDotAck(bookingSet);
+             props.value.greenDotAck(bookingSet,paymentDetails);
              if(props.value.deployedFrom==="booking"){
                 setTimeout(()=>{
                     props.value.distressCall(false);
@@ -94,10 +100,6 @@ function PreInvoice(props){
         }
        
     },[bookingSet])
-
-    useEffect(()=>{
-        console.log("My Props: ",props.value.alreadyOccupied)
-    })
 
     return<>
     
@@ -130,7 +132,7 @@ function PreInvoice(props){
         {
             (!root) &&
             <OccupiedContext.Provider value={{alreadyOccupied:props.value.alreadyOccupied}}>
-                 <FreeTimeSlotPick value={{saloonDetails:paymentDetails,feedBack:getFeedbackFromAppointmentSet}}/>
+                 <FreeTimeSlotPick value={{saloonDetails:paymentDetails,feedBack:getFeedbackFromAppointmentSet,feedBackTime:getTimeSlot}}/>
             </OccupiedContext.Provider>
             
         }
@@ -187,7 +189,6 @@ function InvoicePrep(props){
     if(props.value.profPicAck){
         setShowPicExtender(true)
         setClosePic(false)
-        
     }
     else{
         setShowPicExtender(false)
@@ -196,7 +197,6 @@ function InvoicePrep(props){
    let handleClosePickExtender=(event)=>{
         setClosePic(true)
         // props.value.picFeedBack(true);
-       
    }
 //    useEffect(()=>{
 //     let imageView = document.querySelector(".profile-pic-extender")
@@ -263,10 +263,6 @@ function FreeTimeSlotPick(props){
 
     let freeTime= ["9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00"];
 
-   useEffect(()=>{
-    console.log("Payment Details :",props.value.saloonDetails)
-   })
-
    let getSlotDisable=(status)=>{
     setSlotConfirmed(status)
    }
@@ -279,6 +275,7 @@ function FreeTimeSlotPick(props){
     <div className="time-slot-selector">
         {freeTime.map((slot,index)=>(
             <div key={index} className="my-time-slot" onClick={()=>{
+                
                 setSlotSelected({status:true,value:slot})
             }}>{slot}</div>
         ))}
@@ -295,6 +292,7 @@ function FreeTimeSlotPick(props){
             <div className="button-space">
                 <button className="slot-select-confirm-btn" id="s-s-btn-confirm" onClick={()=>{
                     if(!existingBooking.alreadyOccupied){
+                        props.value.feedBackTime(slotSelected.value);
                         setSlotConfirmed(true);
                     }
                     else{
@@ -310,7 +308,7 @@ function FreeTimeSlotPick(props){
     </div>
     }
     {(slotConfirmed)&&<AppointmentSet value={{feedBack:getSlotDisable,finalFeedBack:props.value.feedBack}}/>}
-    {(twiceDisclaimer) && <div>There is already an appointment scheduled in the system, Try Cancelling the existing appointment</div>}
+    {(twiceDisclaimer) &&<section className=""> <div>There is already an appointment scheduled in the system, Try Cancelling the existing appointment</div></section>}
     </section>
     </>
 }
@@ -331,7 +329,6 @@ function AppointmentSet(props){
             .to(messageBox.current,{opacity:1})
             // .to(messageBox.current,{opacity:0,duration:1,delay:3})
             .to(messageBox.current,{x:200,duration:2,delay:3.5})
-            
         },1000)
     },[])
 

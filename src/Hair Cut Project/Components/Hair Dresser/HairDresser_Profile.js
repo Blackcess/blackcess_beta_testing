@@ -30,6 +30,8 @@ import { femaleLookUpTable } from "../Look Up Tables (Only For Design Purposes)/
 import Shopping from "../Shopping Center/Shopping";
 import MyBookings from "../Bookings/Bookings";
 import { GiGlassCelebration } from "react-icons/gi";
+import AppointmentDetails from "../Appointment Details/AppointmentDetails";
+import "../../Women hair styles manager/w_hairstyleManager";
 
 //create a context for screen width data
 let ScreenWidthData = createContext();
@@ -363,9 +365,11 @@ function MainAreaRow2(props){
     let [rootAck,setRootAck]=useState(false)
     let [tableLookUpId,setTableLookUpId]=useState(-1);
     let [rootDisplay,setRootDisplay]=useState(true)
-    let [exitWindow,setExitWindow]=useState({payment:false,shopping:false,samples:false,dresserProfile:false,home:false,bookings:false,store:false,friends:false})
-    let [greenDot,setGreenDot]=useState(false);
-
+    let [exitWindow,setExitWindow]=useState({payment:false,shopping:false,samples:false,dresserProfile:false,home:false,bookings:false,store:false,friends:false,bookingDetails:false})
+    let [greenDot,setGreenDot]=useState({status:false,details:{}});
+    let [appointPopUp,setAppointPopUp]= useState({status:false,frequency:0});
+    let [appointmentCancelled,setAppointmentCancelled]=useState(false);
+    
         let values=["Home","Bookings","Store","Clients","Friends"]
         let icons=[ <FaWallet/>,<TbBrandBooking />,<IoMdAppstore />,<FaPersonRays />,<GiThreeFriends />];
           //initialisation
@@ -400,6 +404,10 @@ function MainAreaRow2(props){
         function getDataFromRootComponent(data,id=-1,forShopping={}){
             // console.log(forShopping)
             setRootDisplay(false)
+            setAppointPopUp((prevState)=>{ 
+                prevState.status=false;
+                return prevState;
+            })
             if(data==="payment"){
                 // manageWindows("all")
                 setRootStatus({goPayment:true,generalService:false,hairDresserProfile:false,sampleImages:false})
@@ -426,12 +434,20 @@ function MainAreaRow2(props){
             }
         }
         function rootChildClose(distress){
+              setAppointPopUp((prevState)=>{ 
+                prevState.status=false;
+                return prevState;
+            })
             setRootDisplay(distress)
              manageWindows("all")
         }
         // ----------------------------------------------------------------->
 
         function getDataFromQuickNav(data){
+            setAppointPopUp((prevState)=>{ 
+                prevState.status=false;
+                return prevState;
+            })
             if(data==="home"){
                 manageWindows("home");
                 setRootDisplay(true)
@@ -442,17 +458,47 @@ function MainAreaRow2(props){
             return;
         }
 
-        let greenDotAck=(status)=>{
-            setGreenDot(status)
+        let greenDotAck=(status,details)=>{
+            setGreenDot({status:status,details:details})
            
             setTimeout( ()=>{
                 getDataFromQuickNav("bookings")
             },4000)
         }
 
+       
       
+        let getDataFromAppointPopUp=(data)=>{
+            setAppointPopUp((prevState)=>{
+                prevState.status=data;
+                prevState.frequency=(prevState.frequency+1)
+                return prevState;
+            });
+        }
+        useEffect(()=>{
+            if(appointPopUp.status){
+                setRootDisplay(false);
+                manageWindows("bookingDetails");
+            }
+        },[appointPopUp.status])
+        
+     let getCancellation= (status)=>{
+        setAppointmentCancelled(status);
+     }
 
-
+     useEffect(()=>{
+        if(appointmentCancelled){
+            console.log("Hello People")
+            manageWindows("all")
+            setRootDisplay(true)
+            setGreenDot((prev)=>{
+                prev.status=false;
+                prev.details={};
+                return prev
+            })
+            setAppointmentCancelled(false);
+        }
+     },[appointmentCancelled])
 
     return <>
      <div className="delete-later">
@@ -460,27 +506,29 @@ function MainAreaRow2(props){
              <RootComponent/>
         </ScreenWidthData.Provider>
         }
-        {(!rootDisplay && exitWindow.payment)&& <PreInvoice value={{keyId:tableLookUpId, distressCall:rootChildClose,greenDotAck:greenDotAck,deployedFrom:"root",alreadyOccupied:greenDot}}/>}
+        {(!rootDisplay && exitWindow.payment)&& <PreInvoice value={{keyId:tableLookUpId, distressCall:rootChildClose,greenDotAck:greenDotAck,deployedFrom:"root",alreadyOccupied:greenDot.status}}/>}
        {(!rootDisplay && exitWindow.shopping) && <div onClick={()=>{rootChildClose(true)}}>Blackcess Shopping Center Is Under Construction</div>}
        {(!rootDisplay && exitWindow.dresserProfile) && <div onClick={()=>{rootChildClose(true)}}>Hair Dresser Profile Is Under Construction </div>}
         {(!rootDisplay && exitWindow.samples) && <div onClick={()=>{rootChildClose(true)}} style={{background:`${xxx}`, height:"150px", backgroundSize:"cover",backgroundPosition:"center"}}>Samples Section  Is Under Construction </div>}
-        {(!rootDisplay && exitWindow.bookings) && <div className="booking-area"><MyBookings value={{keyId : tableLookUpId + 1,distressCall:rootChildClose,greenDotAck:greenDotAck,alreadyOccupied:greenDot}}/></div>}
+        {(!rootDisplay && exitWindow.bookings) && <div className="booking-area"><MyBookings value={{keyId : tableLookUpId + 1,distressCall:rootChildClose,greenDotAck:greenDotAck,alreadyOccupied:greenDot.status}}/></div>}
         {(!rootDisplay && exitWindow.store) && <div onClick={()=>{rootChildClose(true)}}>Store Section  Is Under Construction </div>}
         {(!rootDisplay && exitWindow.clients) && <div onClick={()=>{rootChildClose(true)}}>Clients Section  Is Under Construction </div>}
         {(!rootDisplay && exitWindow.friends) && <div onClick={()=>{rootChildClose(true)}}>Friends Section  Is Under Construction </div>}
+        {/* {(!rootDisplay && exitWindow.bookingDetails) && <div onClick={()=>{rootChildClose(true)}}>This Section  Is Under Construction </div>} */}
+        {(!rootDisplay && exitWindow.bookingDetails) && <AppointmentDetails  value={{details:greenDot.details,cancellationFeedback:getCancellation}}/>}
       
         </div>
         
    { (props.value.screenState.mobileScreen)&& <div className="shiot">
     
         {listElements.map((element,index)=>(
-           (element.value==="Bookings" && greenDot) ?  <div key={Math.random()*5353} className="green-dot-enable"><MainAreaRow2_helper value={{value:element.value,icon:element.icon,index:index,feedBack:getDataFromQuickNav,ScreenWidthData:props.value.screenState}}/></div> : <div key={Math.random()*5353}><MainAreaRow2_helper value={{value:element.value,icon:element.icon,index:index,feedBack:getDataFromQuickNav,ScreenWidthData:props.value.screenState}}/></div>
+           (element.value==="Bookings" && greenDot.status) ?  <div key={Math.random()*5353} className="green-dot-enable"><MainAreaRow2_helper value={{value:element.value,icon:element.icon,index:index,feedBack:getDataFromQuickNav,ScreenWidthData:props.value.screenState}}/></div> : <div key={Math.random()*5353}><MainAreaRow2_helper value={{value:element.value,icon:element.icon,index:index,feedBack:getDataFromQuickNav,ScreenWidthData:props.value.screenState}}/></div>
         ))}
     </div>
   
     
 }
-    {(greenDot) &&  <AppointmentPopUp/>}
+    {(greenDot.status) &&  <AppointmentPopUp value={{feedBack:getDataFromAppointPopUp}}/>}
     
     </>
 }
@@ -531,7 +579,9 @@ function AppointmentPopUp(props){
     },[showDetails])
 
     return <>
-     <div className="order-set-pop-up">
+     <div className="order-set-pop-up" onClick={(event)=>{
+        props.value.feedBack(true);
+     }}>
         <div className="order-pop-up-icon" onClick={()=>{
             setShowDetails(true)
         }}></div>
